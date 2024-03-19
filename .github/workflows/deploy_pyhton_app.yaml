@@ -25,7 +25,7 @@ jobs:
       - name: Build Docker Image
         working-directory: Task2
         run: |
-          docker build -t my-python-app:${GITHUB_SHA} .
+          docker build -t my-python-app .
           docker tag my-python-app ${{secrets.DOCKER_USERNAME}}/my-python-app:${GITHUB_SHA}
           docker tag my-python-app ${{secrets.DOCKER_USERNAME}}/my-python-app:latest
 
